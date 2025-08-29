@@ -1,0 +1,75 @@
+/* --- src/index.css --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
+/* --- Variables CSS (Valores por defecto para el Modo CLARO) --- */
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --text-light: #0f182cfb; /* Color de texto oscuro para modo claro */
+    --text-medium: #6c757d;
+    --text-dark: #B0B0B0;
+    --bg-light: #F8F9FA;
+    --bg-dark: #FFFFFF; /* Cambiado para evitar conflictos, el fondo principal es --bg-light */
+    --card-bg: #FFFFFF;
+    --card-bg-light: #E9ECEF;
+    --border-color: #E9ECEF;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --k-logo-color: #00CFFF;
+    --k-logo-glow-color: rgba(0, 207, 255, 0.8);
+    --translucent-bg: rgba(255, 255, 255, 0.7);
+
+    /* Tipografía */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+/* --- Reseteo de CSS y estilos base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-light); /* Utiliza la variable del tema */
+    background-color: var(--bg-light); /* Utiliza la variable del tema */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Estilos para el Modo Oscuro --- */
+body.dark-mode {
+    --text-light: #f3f4f6; /* Texto claro para el modo oscuro */
+    --text-medium: #d1d5db;
+    --text-dark: #6b7280;
+    --bg-dark: #080808; /* Fondo principal para el modo oscuro */
+    --card-bg: #1f2937;
+    --card-bg-light: #374151;
+    --border-color: #374151;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --translucent-bg: rgba(18, 18, 18, 0.7);
+}
+
+/* Opcional: Ajustes específicos para el header en dark mode */
+body.dark-mode .main-header.scrolled .header-container {
+    background-color: var(--translucent-bg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+body.dark-mode .nav-link:hover {
+    color: var(--k-logo-color);
+}

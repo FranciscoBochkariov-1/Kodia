@@ -1,0 +1,300 @@
+/* --- Variables CSS --- */
+:root {
+    /* Paleta Minimalista y Moderna */
+    --kodia-dark: #1A1A1A; /* Negro profundo para el fondo */
+    --kodia-light: #F5F5F5; /* Blanco roto para el texto/fondo */
+    --kodia-accent: #00CFFF; /* Azul eléctrico / Turquesa para acentos */
+    --kodia-secondary-accent: #00D1C6; /* Turquesa oscuro para contraste */
+
+    /* Colores base para el modo claro */
+    --text-primary: var(--kodia-dark);
+    --text-secondary: #6c757d; 
+    --bg-primary: var(--kodia-light); 
+    --border-color: #E9ECEF;
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    /* Nuevas variables para modo oscuro */
+    --dark-bg-primary: var(--kodia-dark);
+    --dark-bg-secondary: #242424;
+    --dark-text-primary: var(--kodia-light); 
+    --dark-text-secondary: #B0B0B0; 
+    --dark-border-color: #333333;
+    --dark-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif; /* Usamos Inter, que es super moderna */
+
+    --header-height: 80px;
+
+    /* Color específico para la K del logo y el botón de contacto */
+    --k-logo-color: var(--kodia-accent);
+    --k-logo-glow-color: rgba(0, 207, 255, 0.8);
+}
+
+/* --- Estilos para el Modo Oscuro --- */
+body.dark-mode {
+    --text-primary: var(--dark-text-primary);
+    --text-secondary: var(--dark-text-secondary);
+    --bg-primary: var(--dark-bg-primary);
+    --bg-secondary: var(--dark-bg-secondary);
+    --border-color: var(--dark-border-color);
+    --shadow-light: var(--dark-shadow);
+    color: var(--dark-text-primary);
+    background-color: var(--dark-bg-primary);
+}
+
+/* --- Reseteo y Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Header y Navegación --- */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 2rem; /* Aumenta el padding para un look más "espacioso" */
+    transition: padding 0.3s ease, background 0.3s ease;
+}
+
+.main-header.scrolled {
+    padding: 1rem 2rem;
+    background-color: transparent; /* No hay fondo transparente inicial */
+}
+
+.header-container {
+    max-width: 1200px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.2, 0, 0, 1);
+    box-shadow: none;
+}
+
+.main-header.scrolled .header-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco sutil para el efecto de cristal */
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    box-shadow: var(--shadow-light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .main-header.scrolled .header-container {
+    background-color: rgba(36, 36, 36, 0.5); /* Fondo gris oscuro para el modo oscuro */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--dark-shadow);
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer; 
+}
+
+.logo .logo-mark {
+    color: var(--k-logo-color);
+    font-size: 2.5rem;
+    margin-right: 5px;
+    text-shadow: 0 0 5px var(--k-logo-glow-color);
+}
+.logo .logo-text {
+    color: var(--text-primary);
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.desktop-nav .nav-list {
+    display: flex;
+    gap: 35px;
+}
+
+.desktop-nav .nav-link {
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 1.05rem;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.desktop-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--kodia-accent);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Curva de animación más moderna */
+    border-radius: 2px;
+}
+
+.desktop-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.desktop-nav .nav-link:hover {
+    color: var(--kodia-accent);
+}
+
+.desktop-nav .cta-nav {
+    background: linear-gradient(45deg, var(--kodia-accent), var(--kodia-secondary-accent));
+    border: none;
+    color: var(--kodia-dark);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 207, 255, 0.3);
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+.desktop-nav .cta-nav:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 207, 255, 0.4), 0 0 30px rgba(0, 207, 255, 0.6);
+    color: var(--kodia-dark);
+}
+.desktop-nav .cta-nav::after {
+    content: none;
+}
+
+/* --- Mobile Menu Toggle --- */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1100;
+    color: var(--text-primary);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu-toggle .icon-open {
+    display: block;
+}
+.mobile-menu-toggle .icon-close {
+    display: none;
+}
+.mobile-menu-toggle.active .icon-open {
+    display: none;
+}
+.mobile-menu-toggle.active .icon-close {
+    display: block;
+}
+
+/* --- Estilos del Menú Móvil --- */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding-top: var(--header-height);
+    overflow-y: auto;
+}
+
+body.dark-mode .mobile-nav {
+    background-color: var(--dark-bg-primary);
+}
+    
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.mobile-nav-link {
+    color: var(--text-primary);
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.mobile-nav-link:hover {
+    color: var(--kodia-accent);
+}
+
+.mobile-nav-link.cta-nav {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, var(--kodia-accent), var(--kodia-secondary-accent));
+    border: none;
+    color: var(--kodia-dark);
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.mobile-nav-link.cta-nav:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 207, 255, 0.4), 0 0 30px rgba(0, 207, 255, 0.6);
+}
+
+/* --- Media Queries --- */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 1rem 1.5rem;
+    }
+}
+@media (max-width: 767px) {
+    .desktop-nav {
+        display: none;
+    }
+    .mobile-menu-toggle {
+        display: block;
+    }
+}

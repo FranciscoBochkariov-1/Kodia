@@ -1,0 +1,412 @@
+/* --- src/CSS/contacto.css --- */
+
+/* Importa la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Variables de Color */
+:root {
+    --bg-light: #f5f5f5;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555;
+    --k-logo-color: #00b8d4;
+    --k-logo-color-rgb: 0, 184, 212;
+    --white: #ffffff;
+    --input-bg: #fff;
+    --border-color: #e0e0e0;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --dark-bg-primary: #0a0a0a;
+    --dark-bg-secondary: #1a1a1a;
+    --dark-text-primary: #f5f5f5;
+    --dark-text-secondary: #bbb;
+    --dark-input-bg: #2d2d2d;
+    --dark-border-color: #444;
+}
+
+/* --- Estructura y Fondo --- */
+.contact-section {
+    padding: 8rem 2rem;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1;
+}
+.contact-section #tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.contact-info-block {
+    text-align: left;
+}
+
+/* --- Efectos de Texto --- */
+.contact-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.contact-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+.contact-detail {
+    font-family: 'Poppins', sans-serif;
+}
+.contact-form {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Efecto de degradado para la palabra "proyecto" */
+.gradient-text {
+    background: linear-gradient(135deg, #7b58c8, #00b8d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Efecto Glitch */
+.glitch {
+    position: relative;
+    display: inline-block;
+}
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    overflow: hidden;
+    clip: rect(0, 9999px, 0, 0);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+.glitch::before {
+    left: -2px;
+    text-shadow: 2px 0 #ff00c1; /* Color magenta */
+    animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+.glitch::after {
+    left: 2px;
+    text-shadow: -2px 0 #00ffc1; /* Color cian */
+    animation: glitch-anim-3 2s infinite linear alternate-reverse;
+}
+@keyframes glitch-anim {
+    0% { clip: rect(44px, 9999px, 56px, 0); }
+    10% { clip: rect(66px, 9999px, 88px, 0); }
+    20% { clip: rect(10px, 9999px, 20px, 0); }
+    30% { clip: rect(55px, 9999px, 65px, 0); }
+    40% { clip: rect(78px, 9999px, 88px, 0); }
+    50% { clip: rect(12px, 9999px, 22px, 0); }
+    60% { clip: rect(33px, 9999px, 43px, 0); }
+    70% { clip: rect(89px, 9999px, 99px, 0); }
+    80% { clip: rect(21px, 9999px, 31px, 0); }
+    90% { clip: rect(74px, 9999px, 84px, 0); }
+    100% { clip: rect(96px, 9999px, 106px, 0); }
+}
+@keyframes glitch-anim-2 {
+    0% { clip: rect(56px, 9999px, 66px, 0); }
+    10% { clip: rect(12px, 9999px, 22px, 0); }
+    20% { clip: rect(78px, 9999px, 88px, 0); }
+    30% { clip: rect(33px, 9999px, 43px, 0); }
+    40% { clip: rect(90px, 9999px, 100px, 0); }
+    50% { clip: rect(21px, 9999px, 31px, 0); }
+    60% { clip: rect(65px, 9999px, 75px, 0); }
+    70% { clip: rect(1px, 9999px, 11px, 0); }
+    80% { clip: rect(45px, 9999px, 55px, 0); }
+    90% { clip: rect(87px, 9999px, 97px, 0); }
+    100% { clip: rect(10px, 9999px, 20px, 0); }
+}
+@keyframes glitch-anim-3 {
+    0% { clip: rect(11px, 9999px, 21px, 0); }
+    10% { clip: rect(56px, 9999px, 66px, 0); }
+    20% { clip: rect(89px, 9999px, 99px, 0); }
+    30% { clip: rect(33px, 9999px, 43px, 0); }
+    40% { clip: rect(77px, 9999px, 87px, 0); }
+    50% { clip: rect(21px, 9999px, 31px, 0); }
+    60% { clip: rect(65px, 9999px, 75px, 0); }
+    70% { clip: rect(1px, 9999px, 11px, 0); }
+    80% { clip: rect(45px, 9999px, 55px, 0); }
+    90% { clip: rect(87px, 9999px, 97px, 0); }
+    100% { clip: rect(10px, 9999px, 20px, 0); }
+}
+
+
+.contact-details {
+    margin-bottom: 2rem;
+}
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: transform 0.3s ease;
+}
+.contact-detail:hover {
+    transform: translateX(10px);
+}
+.detail-icon {
+    color: var(--k-logo-color);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.contact-detail:hover .detail-icon {
+    transform: rotate(10deg) scale(1.2);
+}
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+.social-icon {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icon:hover {
+    color: var(--k-logo-color);
+    transform: translateY(-5px) scale(1.2);
+}
+
+/* --- Estilos del Formulario con efecto Glassmorphism --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.form-group {
+    position: relative;
+    transition: all 0.3s ease;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    resize: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--k-logo-color);
+    box-shadow: 0 0 5px rgba(var(--k-logo-color-rgb), 0.5);
+    background: rgba(255, 255, 255, 0.2);
+}
+.form-group label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: 0.5rem;
+    left: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--k-logo-color);
+    background-color: transparent;
+    padding: 0 0.25rem;
+}
+.submit-btn {
+    width: auto;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(45deg, var(--k-logo-color), #4dd0e1);
+    border: none;
+    color: var(--white);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(var(--k-logo-color-rgb), 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.submit-btn:hover {
+    box-shadow: 0 0 20px rgba(var(--k-logo-color-rgb), 0.8), 0 0 40px rgba(var(--k-logo-color-rgb), 0.5);
+    transform: translateY(-2px);
+}
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+    opacity: 0;
+}
+.submit-btn:hover::before {
+    opacity: 1;
+    transform: translate(-10%, -10%);
+}
+.submit-btn:disabled {
+    cursor: not-allowed;
+    background: var(--border-color);
+    color: var(--text-secondary);
+    box-shadow: none;
+}
+.form-status-messages {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+.form-status-success {
+    color: var(--success-color);
+}
+.form-status-error {
+    color: var(--error-color);
+}
+
+/* --- Estilos para el Modo Oscuro --- */
+body.dark-mode .contact-section {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+}
+body.dark-mode .contact-title {
+    color: var(--dark-text-primary);
+}
+body.dark-mode .contact-description,
+body.dark-mode .contact-detail span {
+    color: var(--dark-text-secondary);
+}
+body.dark-mode .social-icon {
+    color: var(--dark-text-primary);
+}
+body.dark-mode .contact-form {
+    background: rgba(26, 26, 26, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(26, 26, 26, 0.2);
+}
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    border-color: rgba(68, 68, 68, 0.3);
+    background: rgba(45, 45, 45, 0.1);
+    color: var(--dark-text-primary);
+}
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+    box-shadow: 0 0 5px rgba(var(--k-logo-color-rgb), 0.5);
+    background: rgba(45, 45, 45, 0.2);
+}
+body.dark-mode .form-group label {
+    color: var(--dark-text-secondary);
+}
+body.dark-mode .form-group input:focus + label,
+body.dark-mode .form-group input:not(:placeholder-shown) + label,
+body.dark-mode .form-group textarea:focus + label,
+body.dark-mode .form-group textarea:not(:placeholder-shown) + label {
+    background-color: transparent;
+}
+body.dark-mode .submit-btn {
+    border: none;
+    color: var(--dark-bg-primary);
+}
+body.dark-mode .submit-btn:hover {
+    color: var(--white);
+}
+
+/* --- Media Queries --- */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .contact-info-block {
+        text-align: center;
+    }
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .submit-btn {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 5rem 1rem;
+    }
+    .contact-title {
+        font-size: 2.5rem;
+    }
+    .contact-form {
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+    .contact-description {
+        font-size: 1rem;
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+    .submit-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+    }
+}

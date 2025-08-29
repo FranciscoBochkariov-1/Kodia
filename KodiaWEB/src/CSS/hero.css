@@ -1,0 +1,292 @@
+/* my-react-portfolio/src/CSS/hero.css */
+
+/* Importar fuentes e íconos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Variables CSS para Dark Mode y temas */
+:root {
+    /* Colores principales */
+    --primary-color: #007bff;
+    --accent-color: #00d4ff;
+    --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #007bff 100%);
+    
+    /* Colores de fondo (Dark Mode por defecto) */
+    --bg-primary: #0a0a0a;
+    --bg-overlay: rgba(0, 0, 0, 0.7);
+    
+    /* Colores de texto */
+    --text-primary: #ffffff;
+    --text-secondary: #b8b8b8;
+    --text-glow: #00d4ff; /* Nuevo color para el efecto glow */
+    
+    /* Sombras */
+    --shadow-glow: 0 0 40px rgba(0, 123, 255, 0.3);
+    
+    /* Espaciado */
+    --container-max: 1200px;
+    
+    /* Transiciones */
+    --transition-medium: 0.4s ease-out;
+    
+    /* Z-index */
+    --z-background: 1;
+    --z-overlay: 2;
+    --z-content: 10;
+}
+
+/* Light Mode Override */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-overlay: rgba(255, 255, 255, 0.9);
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-glow: #007bff;
+}
+
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero Section Principal */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--bg-primary);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fondo 3D Hyperspeed */
+.hero-background-3d {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-background);
+    opacity: 0.9;
+    will-change: transform;
+}
+
+/* Overlay para mejorar legibilidad */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-overlay);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+    z-index: var(--z-overlay);
+}
+
+/* Contenido principal */
+.hero-content {
+    position: relative;
+    z-index: var(--z-content);
+    max-width: var(--container-max);
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+    will-change: opacity, transform;
+}
+
+/* Título principal con efecto de resplandor */
+.hero-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem); /* Título más pequeño */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.02em;
+    /* Efecto de resplandor */
+    text-shadow: 
+        0 0 10px var(--text-glow), 
+        0 0 20px var(--text-glow), 
+        0 0 30px var(--text-glow);
+}
+
+/* Subtítulo */
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.95;
+}
+
+/* Estilo para la letra 'K' de Kodia */
+.kodia-k {
+    color: var(--accent-color);
+    font-weight: 600; /* Para que la 'K' destaque un poco más */
+}
+
+/* Contenedor de botones CTA */
+.cta-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+/* Botones CTA */
+.hero-cta-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all var(--transition-medium);
+    cursor: pointer;
+    overflow: hidden;
+    min-width: 180px;
+    text-align: center;
+    border: 2px solid transparent; /* Ahora el borde es siempre transparente */
+    outline: none; /* Elimina el borde de enfoque por defecto */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Íconos dentro de los botones */
+.hero-cta-button i {
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+}
+
+/* Botón principal (Ver Proyectos) */
+.hero-cta-button.primary {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+}
+
+.hero-cta-button.primary:hover {
+    transform: translateY(-3px);
+    /* Nuevo efecto de resplandor que sigue la forma del botón */
+    box-shadow: 0 0 25px 5px rgba(0, 123, 255, 0.4);
+}
+
+.hero-cta-button.primary:active {
+    transform: translateY(-1px);
+}
+
+/* Botón secundario (Contáctame) */
+.hero-cta-button.secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color); /* Se mantiene la transición de color */
+    color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px 5px rgba(0, 123, 255, 0.2); /* Sombra también para este botón */
+}
+
+/* Contenedor de características adicionales */
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.feature-item i {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.feature-text {
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 3rem); /* Ajuste para móviles */
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+    
+    .cta-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-cta-button {
+        width: 100%;
+        max-width: 280px;
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+
+    .features-container {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .feature-item {
+        font-size: 0.9rem;
+    }
+
+    .feature-item i {
+        font-size: 1.1rem;
+    }
+}

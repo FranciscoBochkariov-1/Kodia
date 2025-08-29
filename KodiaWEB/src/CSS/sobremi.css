@@ -1,0 +1,787 @@
+body.dark-mode .pillars-container {
+    border-left-color: var(--k-logo-color);
+}
+
+body.dark-mode .pillars-title {
+    color: var(--k-logo-color);
+}
+
+body.dark-mode .pillars-list li {
+    color: var(--dark-text-secondary);
+}
+
+body.dark-mode .pillars-list li:before {
+    color: var(--k-logo-color);
+}/* =========================
+   ESTILOS PARA PILARES
+========================= */
+.pillars-container {
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-left: 3px solid var(--k-logo-color);
+    padding-left: 1.5rem;
+}
+
+.pillars-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--k-logo-color);
+}
+
+.pillars-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pillars-list li {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.pillars-list li:before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: var(--k-logo-color);
+    font-size: 0.9rem;
+    top: 0.1rem;
+}
+
+/* =========================
+   CATEGORÍAS DE ICONOS
+========================= */
+.orbital-icon.frontend .icon-wrapper {
+    border: 2px solid var(--cyber-primary);
+    box-shadow: 
+        0 0 15px var(--cyber-primary),
+        inset 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.orbital-icon.backend .icon-wrapper {
+    border: 2px solid var(--cyber-secondary);
+    box-shadow: 
+        0 0 15px var(--cyber-secondary),
+        inset 0 0 15px rgba(255, 0, 255, 0.1);
+}
+
+.orbital-icon.tools .icon-wrapper {
+    border: 2px solid var(--cyber-accent);
+    box-shadow: 
+        0 0 15px var(--cyber-accent),
+        inset 0 0 15px rgba(0, 255, 136, 0.1);
+}/* --- src/CSS/sobremi.css --- */
+:root {
+    /* Colores de tecnologías Frontend & Backend */
+    --color-html: #E34F26;
+    --color-css: #1572B6;
+    --color-js: #F7DF1E;
+    --color-react: #61DAFB;
+    --color-vite: #646CFF;
+    --color-python: #3776AB;
+    --color-django: #092E20;
+    --color-mysql: #4479A1;
+    --color-nodejs: #68A063;
+    --color-express: #000000;
+    --color-mongodb: #47A248;
+    --color-git: #F05032;
+    --color-database: #336791;
+    
+    /* Colores futurísticos */
+    --cyber-primary: #00ffff;
+    --cyber-secondary: #ff00ff;
+    --cyber-accent: #00ff88;
+    --cyber-glow: rgba(0, 255, 255, 0.3);
+    --cyber-bg: rgba(0, 20, 40, 0.8);
+}
+
+.sobre-mi-section {
+    padding: 8rem 2rem;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.sobre-mi-container {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+}
+
+.sobre-mi-info {
+    flex: 1;
+    text-align: left;
+}
+
+.sobre-mi-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.sobre-mi-title .accent-word {
+    color: var(--k-logo-color);
+}
+
+.sobre-mi-text {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   CONTENEDOR FUTURÍSTICO
+========================= */
+.futuristic-photo-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    perspective: 1000px;
+}
+
+.holo-container {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 
+        0 0 50px rgba(0, 255, 255, 0.3),
+        inset 0 0 50px rgba(255, 0, 255, 0.1);
+    border: 2px solid rgba(0, 255, 255, 0.2);
+    animation: holoRotate 8s linear infinite;
+}
+
+@keyframes holoRotate {
+    0% { 
+        box-shadow: 
+            0 0 50px rgba(0, 255, 255, 0.3),
+            inset 0 0 50px rgba(255, 0, 255, 0.1);
+    }
+    25% { 
+        box-shadow: 
+            0 0 50px rgba(255, 0, 255, 0.3),
+            inset 0 0 50px rgba(0, 255, 128, 0.1);
+    }
+    50% { 
+        box-shadow: 
+            0 0 50px rgba(0, 255, 128, 0.3),
+            inset 0 0 50px rgba(0, 255, 255, 0.1);
+    }
+    75% { 
+        box-shadow: 
+            0 0 50px rgba(128, 0, 255, 0.3),
+            inset 0 0 50px rgba(255, 0, 255, 0.1);
+    }
+    100% { 
+        box-shadow: 
+            0 0 50px rgba(0, 255, 255, 0.3),
+            inset 0 0 50px rgba(255, 0, 255, 0.1);
+    }
+}
+
+/* =========================
+   ANILLOS ORBITALES
+========================= */
+.orbital-rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbital-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: subtract;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract;
+}
+
+.ring-1 {
+    width: 320px;
+    height: 320px;
+    top: -160px;
+    left: -160px;
+    border-width: 2px;
+    opacity: 0.6;
+}
+
+.ring-2 {
+    width: 380px;
+    height: 380px;
+    top: -190px;
+    left: -190px;
+    border-width: 1px;
+    opacity: 0.4;
+    animation-direction: reverse;
+}
+
+.ring-3 {
+    width: 260px;
+    height: 260px;
+    top: -130px;
+    left: -130px;
+    border-width: 3px;
+    opacity: 0.8;
+}
+
+/* =========================
+   ICONOS ORBITALES
+========================= */
+.tech-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.orbital-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: 
+        translate(-50%, -50%) 
+        rotate(var(--angle)) 
+        translateX(var(--radius))
+        rotate(calc(-1 * var(--angle)));
+    color: var(--color);
+    font-size: 1.8rem;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 2px solid currentColor;
+    box-shadow: 
+        0 0 20px currentColor,
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   HEXÁGONO CENTRAL
+========================= */
+.hexagon-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+}
+
+.hexagon {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hexagon,
+.hexagon-inner,
+.hexagon-core {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+}
+
+.hexagon-inner {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary));
+    padding: 4px;
+    animation: hexagonGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes hexagonGlow {
+    0% {
+        filter: drop-shadow(0 0 10px var(--cyber-primary));
+    }
+    100% {
+        filter: drop-shadow(0 0 25px var(--cyber-secondary));
+    }
+}
+
+.hexagon-core {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1.1) contrast(1.2);
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    filter: brightness(1.3) contrast(1.4) saturate(1.2);
+}
+
+/* =========================
+   EFECTOS DE SCAN Y GLITCH
+========================= */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyber-primary), transparent);
+    animation: scanMove 2s linear infinite;
+    z-index: 2;
+}
+
+@keyframes scanMove {
+    0% { top: 0%; opacity: 1; }
+    100% { top: 98%; opacity: 0; }
+}
+
+.glitch-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 255, 0.03) 2px,
+        rgba(0, 255, 255, 0.03) 4px
+    );
+    animation: glitchEffect 0.1s infinite linear alternate-reverse;
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+@keyframes glitchEffect {
+    0% { transform: translate(0); }
+    20% { transform: translate(-1px, 1px); }
+    40% { transform: translate(-1px, -1px); }
+    60% { transform: translate(1px, 1px); }
+    80% { transform: translate(1px, -1px); }
+    100% { transform: translate(0); }
+}
+
+/* =========================
+   PARTÍCULAS FLOTANTES
+========================= */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: var(--cyber-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--cyber-primary);
+    animation: particleFloat var(--duration, 3s) infinite linear;
+    animation-delay: var(--delay, 0s);
+    opacity: 0.7;
+}
+
+.particle:nth-child(even) {
+    background: var(--cyber-secondary);
+    box-shadow: 0 0 10px var(--cyber-secondary);
+}
+
+.particle:nth-child(3n) {
+    background: var(--cyber-accent);
+    box-shadow: 0 0 10px var(--cyber-accent);
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(450px) translateX(0) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(400px) translateX(10px) scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(50px) translateX(-10px) scale(1);
+    }
+    100% {
+        transform: translateY(0) translateX(0) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Posicionamiento aleatorio de partículas */
+.particle:nth-child(1) { left: 10%; }
+.particle:nth-child(2) { left: 20%; }
+.particle:nth-child(3) { left: 30%; }
+.particle:nth-child(4) { left: 40%; }
+.particle:nth-child(5) { left: 50%; }
+.particle:nth-child(6) { left: 60%; }
+.particle:nth-child(7) { left: 70%; }
+.particle:nth-child(8) { left: 80%; }
+.particle:nth-child(9) { left: 90%; }
+.particle:nth-child(10) { left: 15%; }
+.particle:nth-child(11) { left: 35%; }
+.particle:nth-child(12) { left: 75%; }
+
+/* =========================
+   GRID CYBER
+========================= */
+.cyber-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    border-radius: 50%;
+    animation: gridPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes gridPulse {
+    0% { opacity: 0.1; }
+    100% { opacity: 0.3; }
+}
+
+/* =========================
+   CERTIFICADO CON EFECTO GLOW
+========================= */
+.vb-cert-container {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.vb-cert-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--cyber-primary), var(--cyber-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.vb-cert-image-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(0, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.vb-cert-image-wrapper:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(0, 255, 255, 0.4),
+        0 0 50px rgba(0, 255, 255, 0.2);
+}
+
+.vb-cert-image-wrapper:hover .cert-glow {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.vb-cert-image-wrapper:hover .cert-inner-glow {
+    opacity: 1;
+}
+
+.vb-cert-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cert-glow {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary), var(--cyber-accent));
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    transform: scale(0.95);
+}
+
+.cert-inner-glow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 255, 255, 0.05));
+    border-radius: 15px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Efectos de partículas para el certificado */
+.vb-cert-image-wrapper::before,
+.vb-cert-image-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--cyber-primary);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px var(--cyber-primary);
+}
+
+.vb-cert-image-wrapper::before {
+    top: 20%;
+    left: 10%;
+    animation: certParticle1 3s infinite ease-in-out;
+}
+
+.vb-cert-image-wrapper::after {
+    bottom: 20%;
+    right: 10%;
+    background: var(--cyber-secondary);
+    box-shadow: 0 0 10px var(--cyber-secondary);
+    animation: certParticle2 3s infinite ease-in-out 1.5s;
+}
+
+.vb-cert-image-wrapper:hover::before,
+.vb-cert-image-wrapper:hover::after {
+    opacity: 1;
+}
+
+@keyframes certParticle1 {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+    50% { transform: translate(20px, -20px) scale(1.2); opacity: 1; }
+}
+
+@keyframes certParticle2 {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+    50% { transform: translate(-20px, 20px) scale(1.2); opacity: 1; }
+}
+
+/* =========================
+   MODO OSCURO
+========================= */
+body.dark-mode .sobre-mi-section {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+}
+
+body.dark-mode .sobre-mi-title {
+    color: var(--dark-text-primary);
+}
+
+body.dark-mode .sobre-mi-text {
+    color: var(--dark-text-secondary);
+}
+
+body.dark-mode .holo-container {
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.15));
+    box-shadow: 
+        0 0 60px rgba(0, 255, 255, 0.4),
+        inset 0 0 60px rgba(255, 0, 255, 0.15);
+}
+
+body.dark-mode .hexagon-core {
+    background: #111;
+}
+
+body.dark-mode .icon-wrapper {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: currentColor;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (max-width: 992px) {
+    .sobre-mi-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .sobre-mi-info {
+        text-align: center;
+    }
+    
+    .futuristic-photo-container {
+        width: 100%;
+        height: 450px;
+    }
+    
+    .holo-container {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-mi-title {
+        font-size: 2.5rem;
+    }
+    
+    .sobre-mi-text {
+        font-size: 1rem;
+    }
+    
+    .vb-cert-title {
+        font-size: 2rem;
+    }
+    
+    .futuristic-photo-container {
+        height: 400px;
+    }
+    
+    .holo-container {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .orbital-icon {
+        font-size: 1.5rem;
+    }
+    
+    .icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .ring-1 {
+        width: 280px;
+        height: 280px;
+        top: -140px;
+        left: -140px;
+    }
+    
+    .ring-2 {
+        width: 320px;
+        height: 320px;
+        top: -160px;
+        left: -160px;
+    }
+    
+    .ring-3 {
+        width: 240px;
+        height: 240px;
+        top: -120px;
+        left: -120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .futuristic-photo-container {
+        height: 350px;
+    }
+    
+    .holo-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .hexagon-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .orbital-icon {
+        font-size: 1.2rem;
+    }
+    
+    .icon-wrapper {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .vb-cert-title {
+        font-size: 1.5rem;
+    }
+    
+    .ring-1 {
+        width: 220px;
+        height: 220px;
+        top: -110px;
+        left: -110px;
+    }
+    
+    .ring-2 {
+        width: 260px;
+        height: 260px;
+        top: -130px;
+        left: -130px;
+    }
+    
+    .ring-3 {
+        width: 180px;
+        height: 180px;
+        top: -90px;
+        left: -90px;
+    }
+}

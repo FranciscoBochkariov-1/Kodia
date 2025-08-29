@@ -1,0 +1,110 @@
+/* =========================================== */
+/* ===  my-react-portfolio/src/CSS/faq.css  === */
+/* =========================================== */
+
+/* ------------------------------------------- */
+/* Sección Principal */
+/* ------------------------------------------- */
+.faq-section {
+    padding: 6rem 1rem;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-section .container {
+    max-width: 900px;
+    width: 100%;
+}
+
+.faq-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-light);
+}
+
+.accent-word {
+    background: linear-gradient(90deg, #00CFFF, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
+
+/* ------------------------------------------- */
+/* Lista de FAQs */
+/* ------------------------------------------- */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+.faq-item {
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------------------- */
+/* Botón de Pregunta */
+/* ------------------------------------------- */
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 600;
+    text-align: left;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.faq-question:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #00CFFF;
+    border-radius: 1rem;
+}
+
+.faq-question.active {
+    color: #00CFFF;
+}
+
+.faq-question.active .faq-icon {
+    color: #00CFFF;
+}
+
+.faq-icon {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* ------------------------------------------- */
+/* Contenedor de la Respuesta */
+/* ------------------------------------------- */
+.faq-answer-container {
+    overflow: hidden;
+    padding: 0 1.5rem;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-medium);
+    padding-bottom: 1.5rem;
+}

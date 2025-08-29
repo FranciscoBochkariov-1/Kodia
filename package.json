@@ -1,0 +1,19 @@
+{
+  "name": "kodia",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@react-three/drei": "^10.7.4",
+    "@react-three/fiber": "^9.3.0",
+    "express": "^5.1.0",
+    "react-router-dom": "^7.8.2",
+    "three": "^0.179.1"
+  }
+}

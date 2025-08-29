@@ -1,0 +1,147 @@
+    /* --- Footer Estilos Generales --- */
+    .main-footer {
+    width: 100%;
+    background-color: var(--bg-dark);
+    color: var(--white);
+    padding: 60px 20px 20px 20px;
+    font-family: var(--font-body);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+    }
+
+    body.dark-mode .main-footer {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-primary);
+    border-top-color: var(--dark-border-color);
+    }
+
+    .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+
+    .footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ajustado a 2 columnas */
+    gap: 40px;
+    width: 100%;
+    padding-bottom: 40px;
+    }
+
+    .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .footer-section h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    }
+
+    body.dark-mode .footer-section h3 {
+    color: var(--k-logo-color);
+    }
+
+    .footer-section p {
+    color: var(--text-secondary);
+    max-width: 300px;
+    line-height: 1.5;
+    }
+
+    .footer-section .logo-text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    }
+
+    .footer-section .logo-k {
+    color: var(--k-logo-color);
+    }
+
+    .footer-section .logo-odia {
+    color: var(--white);
+    }
+
+    /* Modo oscuro */
+    body.dark-mode .footer-section .logo-odia {
+    color: var(--dark-text-primary);
+    }
+
+
+    /* Redes Sociales */
+    .social-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+    }
+
+    .social-links a {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    }
+
+    .social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+    }
+
+    body.dark-mode .social-links a {
+    color: var(--dark-text-secondary);
+    }
+    body.dark-mode .social-links a:hover {
+    color: var(--k-logo-color);
+    }
+
+
+    /* Pie de página (Derechos de autor) */
+    .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+    width: 100%;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    }
+
+    body.dark-mode .footer-bottom {
+    color: var(--dark-text-secondary);
+    border-top-color: var(--dark-border-color);
+    }
+
+
+    /* --- Media Queries --- */
+    @media (max-width: 767px) {
+    .main-footer {
+        padding: 40px 15px 15px 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 20px;
+    }
+
+    .footer-section:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .footer-section .logo-text {
+        font-size: 2rem;
+    }
+    }
