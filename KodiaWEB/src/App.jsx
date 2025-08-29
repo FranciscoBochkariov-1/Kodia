@@ -11,23 +11,25 @@ import FAQ from './components/FAQ.jsx';
 import Sobremi from './components/Sobremi.jsx';
 import ContactSection from './components/ContactSection.jsx';
 import Footer from './components/Footer.jsx';
+import SmoothScrollWrapper from './Efectos/ScrollMotion.jsx';
 
 function App() {
   return (
     <>
       <Header />
       <SocialMediaBar />
-      <main>
-        <HeroSection />
-      </main>
-      <Servicios />
-      <Trabajos />
-      <AcercaDe />
-      <FAQ />
-      <Sobremi />
-      <ContactSection />
-      <Footer />
-      
+      <SmoothScrollWrapper>
+        <main>
+          <HeroSection />
+        </main>
+        <Servicios />
+        <Trabajos />
+        <AcercaDe />
+        <FAQ />
+        <Sobremi />
+        <ContactSection />
+        <Footer />
+      </SmoothScrollWrapper>
     </>
   );
 }
